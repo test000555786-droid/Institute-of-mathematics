@@ -25,9 +25,10 @@ const medals = ['🥇', '🥈', '🥉']
 export default function Results() {
   return (
     <>
-      <section className="relative bg-cover bg-center pt-10 pb-16 md:pt-12 md:pb-20" style={{ backgroundImage: "url('/images/heroes/hero-results.png')" }}>
-        <div className="absolute inset-0 bg-slate-900/70" />
-        <div className="container-main relative z-10 text-center">
+      <section className="relative w-full min-h-[45vh] md:h-[50vh] lg:h-[60vh] flex flex-col justify-center bg-cover bg-center bg-no-repeat z-0" style={{ backgroundImage: "url('/images/heroes/hero-results.png')" }}>
+        <div className="absolute inset-0 bg-slate-900/70 z-0" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent z-0 pointer-events-none" />
+        <div className="container-main relative z-10 text-center pt-16">
           <FadeIn>
             <Trophy size={48} className="text-yellow-400 mx-auto mb-4 drop-shadow-md" />
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Mathematics Hall of Fame</h1>
@@ -38,7 +39,7 @@ export default function Results() {
         </div>
       </section>
 
-      <section className="section-pad bg-slate-50">
+      <section className="section-pad bg-slate-50 relative z-10">
         <div className="container-main">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
             {resultsData.stats.map(s => <StatBig key={s.label} stat={s} />)}

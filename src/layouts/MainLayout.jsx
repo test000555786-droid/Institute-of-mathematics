@@ -11,7 +11,7 @@ export default function MainLayout({ children }) {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className={`flex-1 ${isHome ? '' : 'pt-14 md:pt-16'}`}>
+      <main className="flex-1 w-full block">
         {children}
       </main>
       <Footer />

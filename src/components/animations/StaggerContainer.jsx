@@ -17,7 +17,7 @@ export function StaggerContainer({ children, className = '' }) {
       variants={container}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.1 }}
+      viewport={{ once: true, amount: 0 }}
     >
       {children}
     </motion.div>

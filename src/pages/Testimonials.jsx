@@ -38,9 +38,10 @@ function TestimonialCard({ t }) {
 export default function Testimonials() {
   return (
     <>
-      <section className="relative bg-cover bg-center pt-10 pb-16 md:pt-12 md:pb-20" style={{ backgroundImage: "url('/images/heroes/hero-testimonials.png')" }}>
-        <div className="absolute inset-0 bg-slate-900/70" />
-        <div className="container-main relative z-10 text-center">
+      <section className="relative w-full min-h-[45vh] md:h-[50vh] lg:h-[60vh] flex flex-col justify-center bg-cover bg-center bg-no-repeat z-0" style={{ backgroundImage: "url('/images/heroes/hero-testimonials.png')" }}>
+        <div className="absolute inset-0 bg-slate-900/70 z-0" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent z-0 pointer-events-none" />
+        <div className="container-main relative z-10 text-center pt-16">
           <FadeIn>
             <div className="flex justify-center gap-1 mb-4">
               {[...Array(5)].map((_, i) => <Star key={i} size={24} className="fill-yellow-400 text-yellow-400 drop-shadow-md" />)}
@@ -53,7 +54,7 @@ export default function Testimonials() {
         </div>
       </section>
 
-      <section className="section-pad bg-white">
+      <section className="section-pad bg-white relative z-10">
         <div className="container-main">
           {/* Ratings banner */}
           <FadeIn>

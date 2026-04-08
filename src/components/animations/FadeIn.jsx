@@ -14,7 +14,7 @@ export default function FadeIn({ children, delay = 0, duration = 0.6, className 
       className={className}
       initial={{ opacity: 0, ...dirs[direction] }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
-      viewport={{ once: true, amount: 0.15 }}
+      viewport={{ once: true, amount: 0 }}
       transition={{ duration, delay, ease: [0.25, 0.4, 0.25, 1] }}
     >
       {children}
